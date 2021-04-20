@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>PERSONAL LOAN CALCULATOR APP</h2>
+  <p>
+    This Personal Loan calculator will give you a broad estimate on what your monthly
+payment will be and what the matured loan payment will be after it.
+  </p>
+  <p>
+   Source: https://www.ecomparemo.com/personal-loan-calculator
+  </p>
+<br />
+
+<img src="https://cdn.jsdelivr.net/gh/Kouwalski/BMI-Calculator@master/BMI%20pic.jpg">
+
+<ion-item>
+  <ion-label>Loan Amount:</ion-label>
+  <ion-input type="number" [(ngModel)]="la"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Loan Term [12-24 months]:</ion-label>
+ <ion-input type="number" [(ngModel)]="lt"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Interest Rate [per month]:</ion-label>
+ <ion-input type="number" [(ngModel)]="ir"></ion-input>
+</ion-item>
+
+
+
+<button ion-button color="secondary" (click)="calculatePLC()">CALCULATE</button>
+
+<ion-item *ngIf="tip">
+  <h2>Total Interest Payable: {{tip}} </h2>
+</ion-item>
+
+<ion-item *ngIf="tap">
+  <h2>Total Amount Payable: {{tap}} </h2>
+</ion-item>
+
+<ion-item *ngIf="mp">
+  <h2>Monthly Payment: {{mp}} </h2>
+</ion-item>
