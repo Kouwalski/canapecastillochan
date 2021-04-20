@@ -37,13 +37,13 @@ payment will be and what the matured loan payment will be after it.
 <button ion-button color="secondary" (click)="calculatePLC()">CALCULATE</button>
 
 <ion-item *ngIf="tip">
-  <h2>Total Interest Payable: {{tip}} </h2>
+  <ion-label>Total Interest Payable: {{tip}} </ion-label>
 </ion-item>
 
 <ion-item *ngIf="tap">
-  <h2>Total Amount Payable: {{tap}} </h2>
+  <ion-label>Total Amount Payable: {{tap}} </ion-label>
 </ion-item>
 
 <ion-item *ngIf="mp">
-  <h2>Monthly Payment: {{mp}} </h2>
+  <ion-label>Monthly Payment: {{mp}} </ion-label>
 </ion-item>
